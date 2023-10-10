@@ -1,0 +1,75 @@
+.viewbox {
+    width: 60%;
+    height: auto;
+    margin: auto;
+}
+
+.firstLine {
+    width: 100%;
+    margin: 50px 0 20px 50px;
+    color: #747373;
+    display: flex;
+    /* margin: auto; */
+}
+.category {
+    width: 150px;
+    font-size: 1.2rem;
+    margin-right: 15px;
+    text-align: center;
+    background-color: #d5f3ee;
+    line-height: 35px;
+}
+
+.secondLine {
+    width: 87%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 50px;
+    font-size: 1.1rem;
+    color: #747373;
+}
+.line {
+    width: 88%;
+    border-bottom: 1px solid #747373;
+    margin: 15px 0 20px 50px;
+}
+
+.thirdLine {
+    width: 88%;
+    height: 350px;
+    margin-left: 50px;
+    /* border: 1px solid black; */
+}
+
+.btnbox {
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    gap: 30px;
+}
+
+.tolist,
+.tomodify {
+    background-color: #d5f3ee;
+    width: 100px;
+    height: 35px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todelete {
+    border: none;
+    background-color: #d5f3ee;
+    width: 100px;
+    height: 35px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

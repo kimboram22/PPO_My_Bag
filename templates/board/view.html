@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" type="text/css" href="/css/index.css" />
+        <link rel="stylesheet" type="text/css" href="/css/board/view.css" />
+        <link rel="icon" type="image/png" href="/images/fav.png" />
+    </head>
+    <body>
+        <div class="header">
+            <div class="header-wrap">
+                <div class="logo">
+                    <a href="/">
+                        <img src="/images/logo.png" alt="로고" />
+                    </a>
+                </div>
+                <ul class="menu">
+                    <li><a href="/products/new">NEW</a></li>
+                    <li><a href="/products/all">All</a></li>
+                    <li><a href="/boards/list">NOTICE</a></li>
+                    <li><a href="/accounts/mypage">MY PAGE</a></li>
+                    <li><a href="/accounts/signin">SIGN IN</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="wrapper">
+            <div class="viewbox">
+                <div class="firstLine">
+                    <div class="category">
+                        {% if category == 1 %} 상품 {% elif category == 2 %}
+                        주문 / 결제 {% elif category == 3 %} 배송 {% elif
+                        category == 4 %} 기타 {% else %} 카테고리 없음 {% endif
+                        %}
+                    </div>
+                    <h2>{{title}}</h2>
+                </div>
+                <div class="secondLine">
+                    <p>{{author}} &nbsp; | &nbsp; {{date}}</p>
+                    <p>조회수 {{hit}}</p>
+                </div>
+                <div class="line"></div>
+                <div class="thirdLine">{{content}}</div>
+                <div class="btnbox">
+                    <div class="tolist font">
+                        <a href="/boards/list">목록</a>
+                    </div>
+                    <div class="tomodify font">
+                        <a href="/boards/modify?id={{id}}">수정</a>
+                    </div>
+                    <form method="post" action="/boards/delete?id={{id}}">
+                        <button type="submit" class="todelete font">
+                            삭제
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="info">
+                상호 : PPO-mybag | 주소 : 서울시 도봉구 방학동 | 메일 :
+                qhfka30604@naver.com <br />
+                COPYRIGHT 2023 BY PPO-mybag ALL RIGHTS RESERVED
+            </div>
+        </div>
+    </body>
+</html>
